@@ -10,4 +10,5 @@ project(
    DESCRIPTION "An example TS project with CMake"
    LANGUAGES C CXX)
 
-add_executable(hello_c hello.c)
+add_executable(hello_c hello.c) 
+add_executable(MotorTest MotorTest.c)
