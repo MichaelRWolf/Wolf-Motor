@@ -1,0 +1,57 @@
+
+
+* Build (Cmake)
+~hello.c builds executable~
+[ ]MotorTest.c builds executable*
+MotorTest links to Motor.c
+
+* Google Test 
+asserts trivial math expression
+
+
+* Motor
+new motor state is unknown
+transmit velocity setpoint
+retreive velocity setpoint
+inactive motor reports velocity setpoint
+activating motor reports new state and velocity
+
+* Some Day...
+
+
+velocity
+  setpoint
+  indicated
+
+motor attributes
+  type (rotational, linear)
+  velocity (rotational)
+    setpoint
+    indicated
+    max_continuous
+    max
+    do_not_exceed
+  position (rotational)
+  
+      
+
+
+
+sleep mode
+wake-up
+  on-bus
+
+CAN Frame Types
+ * Data - transmit to receiver
+ * Remote - request a Data frame
+ * Error - bus error
+ * Overload - provide extra delay
+
+TOUCAN Module
+ * Time stamp (16 bit)
+
+Intelligent Compact Drive with CAN Bus Interface. (2018). Retrieved November 25, 2020, from mag | The Magazine by ebm-papst website: https://mag.ebmpapst.com/en/industries/drives/intelligent-compact-drive-with-can-bus-interface-iot_12659/
+
+‌
+
+
