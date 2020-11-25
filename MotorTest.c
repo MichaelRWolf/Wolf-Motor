@@ -1,3 +1,7 @@
+#include "Motor.h"
+
 int main() {
-    return 93;
+    motor_t m;
+    m = Motor_create();
+    return m;
 }

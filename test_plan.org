@@ -3,7 +3,7 @@
 * Build (Cmake)
 ~hello.c builds executable~
 ~MotorTest.c builds executable~
-[ ]MotorTest links to Motor.c
+~MotorTest links to Motor.c~
 
 * Google Test 
 asserts trivial math expression

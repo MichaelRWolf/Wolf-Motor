@@ -11,4 +11,4 @@ project(
    LANGUAGES C CXX)
 
 add_executable(hello_c hello.c) 
-add_executable(MotorTest MotorTest.c)
+add_executable(MotorTest MotorTest.c Motor.c)
