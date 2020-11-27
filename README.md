@@ -3,13 +3,14 @@ The project will create the next breathtaking breakthrough in this planet's hist
 
 # How to build
 On a normal day, open your *nix terminal and hope for the best
-    ``` shell
+
+``` 
 $ cmake -H. -Bbuild 
-    ```
-    And if the heavens smile do ...
-    ``` shell
+```
+And if the heavens smile do ...
+```
 $ cmake --build build -- 
-    ```
+```
 
 ### Google Test
 #### ... as git submodule
