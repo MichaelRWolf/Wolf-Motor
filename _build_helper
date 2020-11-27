@@ -1,0 +1,13 @@
+#! /bin/bash
+(
+
+set -xv
+    cd build && 
+	echo "C_COMPILER  =$CMAKE_C_COMPILER" &&
+	echo "CXX_COMPILER=$CMAKE_CXX_COMPILER" &&
+	cmake .. && 
+	make MAKE_VERBOSE=1 all && 
+	make "${@}" && 
+	echo ==RUN== && 
+	exec "${@}"
+)
