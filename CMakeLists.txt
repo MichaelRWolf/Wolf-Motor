@@ -1,9 +1,6 @@
 # Initialized from https://gitlab.com/CLIUtils/modern-cmake/-/blob/master/examples/extended-project/CMakeLists.txt
 
-cmake_minimum_required(VERSION 3.11...3.19)
-
-set(CMAKE_C_COMPILER     "/usr/bin/gcc")
-set(CMAKE_CXX_COMPILER "/usr/bin/g++")
+cmake_minimum_required(VERSION 3.11)
 
 set(CMAKE_CXX_STANDARD 11) 
 
@@ -17,7 +14,7 @@ project(
 include(CTest)
 enable_testing()
 
-add_subdirectory("${PROJECT_SOURCE_DIR}/extern/googletest" "extern/googletest") 
+# add_subdirectory("${PROJECT_SOURCE_DIR}/extern/googletest" "extern/googletest") 
 
 # hello_c -- Hello World, written in C
 add_executable(hello_c hello.c) 

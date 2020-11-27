@@ -1,7 +1,0 @@
-#! /bin/bash
-
-export CMAKE_C_COMPILER="$(which gcc)"
-export CMAKE_CXX_COMPILER="$(which g++)"
-
-exec ./_build_helper "$@"
-											    
