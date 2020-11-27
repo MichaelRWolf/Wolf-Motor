@@ -1,22 +1,24 @@
 
-
-* Build (Cmake)
+* Test plans
+** Build (Cmake)
 ~hello.c builds executable~
 ~MotorTest.c builds executable~
 ~MotorTest links to Motor.c~
+MotorTest in /test
+Motor.c in /src
 
-* Google Test 
+** Google Test 
 asserts trivial math expression
 
 
-* Motor
+** Motor
 new motor state is unknown
 transmit velocity setpoint
 retreive velocity setpoint
 inactive motor reports velocity setpoint
 activating motor reports new state and velocity
 
-* Some Day...
+** Some Day...
 
 
 velocity
