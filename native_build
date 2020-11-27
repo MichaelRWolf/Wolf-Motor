@@ -1,8 +1,0 @@
-#! /bin/bash
-
-unset CMAKE_C_COMPILER
-unset CMAKE_CXX_COMPILER
-
-exec ./_build_helper "$@"
-    
-											    
