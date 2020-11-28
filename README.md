@@ -1,3 +1,17 @@
+# Wolf Motor
+The project will create the next breathtaking breakthrough in this planet's history.
+
+# How to build
+On a normal day, open your *nix terminal and hope for the best
+
+``` 
+$ cmake -H. -Bbuild 
+```
+And if the heavens smile do ...
+```
+$ cmake --build build -- 
+```
+
 ### Google Test
 #### ... as git submodule
 After hours of scouring the web, I ultimately attached Google Test as a submodule relied heavily on [ProGit](https://git-scm.com/book/en/v2), especially [7.11 Git Tools - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).  
