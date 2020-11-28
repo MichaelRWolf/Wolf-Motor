@@ -9,5 +9,5 @@ add_library(motor_stl STATIC
 )
 
 target_include_directories(motor_stl PUBLIC 
-    ${CMAKE_SOURCE_DIR}/inc
+    ${CMAKE_SOURCE_DIR}/include
 )

@@ -23,7 +23,7 @@ target_link_libraries(${PROJECT_NAME}
 	pthread 
 )
 target_include_directories(${PROJECT_NAME} PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/../inc
+    ${CMAKE_CURRENT_SOURCE_DIR}/../include
 )
 ## Gtest compatible withc ctest
 set(TestArgs "")
