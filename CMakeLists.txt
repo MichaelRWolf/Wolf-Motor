@@ -9,6 +9,8 @@ project(
    LANGUAGES         C CXX
 )
 
+set (CMAKE_VERBOSE_MAKEFILE false)
+
 include(cmake/googletest.cmake) 
 include(cmake/motor.cmake)
 include(CTest)
