@@ -1,11 +1,18 @@
-TEST(SquareRootTest, PositiveNos) { 
-    ASSERT_EQ(6, squareRoot(36.0));
-    ASSERT_EQ(18.0, squareRoot(324.0));
-    ASSERT_EQ(25.4, squareRoot(645.16));
-    ASSERT_EQ(0, squareRoot(0.0));
+#include <gtest/gtest.h>
+#include <utility>
+#include <stdint.h>
+extern "C"{
+#include "Motor.h"
+};
+
+#include "motor_test.h"
+
+TEST_F(motor_test, isOK) { 
+    motor_t motorValue = Motor_create();
+    ASSERT_EQ(17, static_cast<uint16_t>(motorValue));
 }
  
-TEST(SquareRootTest, NegativeNos) {
-    ASSERT_EQ(-1.0, squareRoot(-15.0));
-    ASSERT_EQ(-1.0, squareRoot(-0.2));
+TEST_F(motor_test, isNotOK) {
+    motor_t motorValue = Motor_create();
+    ASSERT_NE(10, static_cast<uint16_t>(motorValue));
 }
