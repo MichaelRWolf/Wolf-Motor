@@ -4,19 +4,56 @@ The project will create the next breathtaking breakthrough in this planet's hist
 # How to build
 On a normal day, open your *nix terminal and hope for the best
 
+_You may wish to choose an appropriate generator option to match your environment_
 ``` 
-$ cmake -H. -Bbuild 
+$ cmake -H. -Bbuild -G"Unix Makefiles"
 ```
 And if the heavens smile do ...
 ```
 $ cmake --build build -- 
 ```
 
-### Google Test
-#### ... as git submodule
-After hours of scouring the web, I ultimately attached Google Test as a submodule relied heavily on [ProGit](https://git-scm.com/book/en/v2), especially [7.11 Git Tools - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).  
+# Folder Structure
 
-There are lots of out-dated tutorials about CMake and Google Test.  As such, they have created a lot of [Cargo Cult](https://en.wikipedia.org/wiki/Cargo_cult) incantations that are impenetrable with the brain of a mere mortal.
+The organization of folders is as below
 
-#### ... plays well with CMake
+| Path | Description |
+| :--- | :--- |
+|```./.vscode ``` | _Folder for VSCode debugging and environment_ |
+|```./build ```   | _Folder for build artefacts_ |
+|```./cmake ```   | _Folder for subject specific recepies in CMake_ |
+|```./include ``` | _Folder for source include header files_ |
+|```./src ``` | _Folder for source c/c++ files_ |
+|```./unit_tests ``` | _Folder for all unit tests_ |
+|```./unit_tests/ut_motor ``` | _Folder for all motor related unit tests in Google Tests with include files_ |
+|```./.gitignore ``` | _file to list all other parts of project ignored in git index_ |
+|```./CMakeLists.txt ``` | _Master CMake recepie_ |
+|```./CMakeSettings.json ``` | _JSON file for setting up VS_ |
+|```./README.md ``` | _This file_ |
+|```./test_plan.org ``` | _Future plans for this project_ |
 
+## Google Test
+Google test is used in this project as an 
+### _ExternalProject_Add_ 
+using the CMake functionality 
+```
+include(ExternalProject)
+```
+as part of the ```googletesthelper.cmake```.
+
+### CTest
+
+All the google tests are linked to CTest using the 
+```
+include(CTest)
+enable_testing()
+include(GoogleTest)
+...
+gtest_add_tests(...)
+```
+as part of ```./unit_tests/CMakeLists.txt ```.
+
+You may run the ```ctest``` by 
+```
+$ cd ./build && ctest
+```

@@ -7,14 +7,17 @@ enable_testing()
 include(GoogleTest)
 
 set(TEST_MOTOR_PATH ${CMAKE_CURRENT_SOURCE_DIR}/ut_motor/)
+
+include_directories(${TEST_MOTOR_PATH})
+
 set(TEST_MOTOR_SOURCES
-	${TEST_MOTOR_PATH}/Motor_test.cpp
+	${TEST_MOTOR_PATH}/motor_test.cpp
 )
 
 # Link GoogleTests
 add_executable(${PROJECT_NAME}
 	main.cpp
-	${SOURCES_Common_Elements}
+	${TEST_MOTOR_SOURCES}
 )
 
 target_link_libraries(${PROJECT_NAME}
