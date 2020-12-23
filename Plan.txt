@@ -6,3 +6,7 @@ Red Green Blue
 4) Google test fluency
 5) Motors
 6) Motions
+
+Mac rules.
+Windows drools.
+
