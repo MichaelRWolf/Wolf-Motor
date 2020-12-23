@@ -3,6 +3,18 @@
 cmake_minimum_required(VERSION 3.11)
 
 project(
+   fb_app
+   VERSION      0.1
+   DESCRIPTION  "For CMake Fluency"
+   LANGUAGES    C
+)
+
+add_executable(
+   fb_app
+   fb_app.c
+)
+
+project(
    wolf_motor        # name
    VERSION 0.1       # version major.minor
    DESCRIPTION       "Some thing good"
@@ -17,3 +29,6 @@ include(CTest)
 enable_testing()
 
 add_subdirectory(unit_tests)
+
+
+
