@@ -1,12 +1,44 @@
 Red Green Blue
 
-1) I assert I can flip flop text changes between us
-2) CMake fluency
-3) Git fluency
+X 1) I assert I can flip flop text changes between us
+X 3) Git fluency 
+
+ 2) CMake fluency
+
+->  build fb_app
+  build fb_lib
+  build fb_app linking to fb_lib
+
+  build fb_test (w/ google test) 
+  build fb_test(w/ google test)  linking to fb_lib
+  TEST list:
+     1 -> "1"
+     3 -> "fizz"
+     6 -> "fizz"
+     5 -> "buzz"
+     15 -> "fizz buzz"
+    -1 -> ""
+     
+
+
+
+fizz-buzz_main executable
+
+   application can exit 17
+   can create fizz_buzz library w/ exit-19 function
+   can link to library exit 19
+   test_harness can exercise exit_19
+   test_harness can link to library and return "fizzer"
+
+
+  
+ 
+
 4) Google test fluency
 5) Motors
 6) Motions
 
 Mac rules.
 Windows drools.
+
 
