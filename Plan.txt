@@ -1,0 +1,8 @@
+Red Green Blue
+
+1) I assert I can flip flop text changes between us
+2) CMake fluency
+3) Git fluency
+4) Google test fluency
+5) Motors
+6) Motions
