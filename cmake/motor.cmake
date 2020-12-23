@@ -1,7 +1,7 @@
 set(MOTOR_SRC_PATH ${CMAKE_SOURCE_DIR}/src)
 
 set(MOTOR_SOURCES
-    ${MOTOR_SRC_PATH}/Motor.c
+    ${MOTOR_SRC_PATH}/motor.c
 )
 
 add_library(motor_stl STATIC
