@@ -1,7 +1,8 @@
 #include <stdlib.h>
 
+#include "fb.h"
 
-void main()
-{
- exit( 17 );
+int main(void) {
+    int rc = return_int();
+    exit(rc);
 }

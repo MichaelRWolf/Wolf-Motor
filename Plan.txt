@@ -6,10 +6,10 @@ X 3) Git fluency
  2) CMake fluency
 
 X  build fb_app
-->  build fb_lib
-  build fb_app linking to fb_lib
+X  build fb_lib
+X  build fb_app linking to fb_lib
 
-  build fb_test (w/ google test) 
+->  build fb_test (w/ google test) 
   build fb_test(w/ google test)  linking to fb_lib
   TEST list:
      1 -> "1"

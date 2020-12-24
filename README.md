@@ -2,15 +2,29 @@
 The project will create the next breathtaking breakthrough in this planet's history.
 
 # How to build
-On a normal day, open your *nix terminal and hope for the best
 
-_You may wish to choose an appropriate generator option to match your environment_
+## Generate a Project Buildsystem
 ``` 
-$ cmake -H. -Bbuild -G"Unix Makefiles"
+cmake -S  . -B build -G  'Unix Makefiles'
 ```
-And if the heavens smile do ...
+(N.B.: The _-H_ internal flag was replaced in 3.13 with the officially supported _-S_ flag.  )
+
+## Build a Project
 ```
-$ cmake --build build -- 
+cmake --build build -- <build-tool-options>
+cmake --build build -- fb_app  
+cmake --build build -- clean 
+cmake --build build -- test
+```
+
+## Run a Command-Line Tool
+```
+cmake -E env buid/fb_test 
+```
+
+## One-liner for edit-build-run cycle
+```
+cmake --build build -- fb_app && cmake -E env build/fb_app
 ```
 
 # Folder Structure
