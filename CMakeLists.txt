@@ -36,6 +36,13 @@ target_include_directories(
     .
 )
 
+
+add_executable(
+    fb_test
+    fb_test.cpp
+)
+
+
 # ================================================================
 
 project(
