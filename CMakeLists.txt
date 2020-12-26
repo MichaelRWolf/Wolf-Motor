@@ -37,11 +37,30 @@ target_include_directories(
 )
 
 
+include(cmake/googletest.cmake)
+include(CTest)
+enable_testing()
+include(GoogleTest)
+
 add_executable(
     fb_test
     fb_test.cpp
 )
 
+target_link_libraries(
+    fb_test
+    ${GTEST_LIBRARIES} 
+    pthread
+)
+
+## Gtest compatible withc ctest
+set(TestArgs "")
+
+gtest_add_tests(
+    fb_test
+    "${TestArgs}" 
+    AUTO
+)
 
 # ================================================================
 
@@ -54,7 +73,7 @@ project(
 
 set (CMAKE_VERBOSE_MAKEFILE false)
 
-include(cmake/googletest.cmake) 
+#include(cmake/googletest.cmake) 
 include(cmake/motor.cmake)
 include(CTest)
 enable_testing()

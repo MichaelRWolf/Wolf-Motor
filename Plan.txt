@@ -35,6 +35,13 @@ fizz-buzz_main executable
  
 
 4) Google test fluency
+   Create a test suite without a framework, and then within a framework
+      Create a test suite with 3 tests using the TEST keyword
+      Create a test suite with 3 tests using the TEST_F keyword (factoring
+       out setup and teardown from previous suite)
+   Add a new test within a test suite in the same file 
+   Create a new test suite (related tests) for a set of differently
+    related tests
 5) Motors
 6) Motions
 
