@@ -8,38 +8,38 @@ project(
     fizz-buzz_dojo
     VERSION      0.1
     DESCRIPTION  "FizzBuzz - Dojo to build fluency in CMake and Google Test"
-    LANGUAGES    C
+    LANGUAGES    C CXX
 )
 
 
 add_executable(
-    fb_app
-    fb_app.c
+    fizz-buzz_app
+    fizz-buzz_app.c
 )
 
 
 add_library(
-    fb_stl
+    fizz-buzz_stl
     STATIC
-    fb.c
+    fizz-buzz.c
 )
 
 
 target_link_libraries(
-    fb_app
-    fb_stl
+    fizz-buzz_app
+    fizz-buzz_stl
 )
 
 
 target_include_directories(
-    fb_stl PUBLIC
+    fizz-buzz_stl PUBLIC
     .
 )
 
 
 add_executable(
-    fb_test
-    fb_test.cpp
+    fizz-buzz_test
+    fizz-buzz_test.cpp
 )
 
 

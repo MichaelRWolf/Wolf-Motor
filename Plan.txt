@@ -5,12 +5,12 @@ X 3) Git fluency
 
  2) CMake fluency
 
-X  build fb_app
-X  build fb_lib
-X  build fb_app linking to fb_lib
+X  build fizz-buzz_app
+X  build fizz-buzz_lib
+X  build fizz-buzz_app linking to fizz-buzz_lib
 
-->  build fb_test (w/ google test) 
-  build fb_test(w/ google test)  linking to fb_lib
+->  build fizz-buzz_test (w/ google test) 
+  build fizz-buzz_test(w/ google test)  linking to fizz-buzz_lib
   TEST list:
      1 -> "1"
      3 -> "fizz"

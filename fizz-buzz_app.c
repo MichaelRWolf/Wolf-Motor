@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-#include "fb.h"
+#include "fizz-buzz.h"
 
 int main(void) {
     int rc = return_int();

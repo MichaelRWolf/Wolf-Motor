@@ -12,19 +12,19 @@ cmake -S  . -B build -G  'Unix Makefiles'
 ## Build a Project
 ```
 cmake --build build -- <build-tool-options>
-cmake --build build -- fb_app  
+cmake --build build -- fizz-buzz_app  
 cmake --build build -- clean 
 cmake --build build -- test
 ```
 
 ## Run a Command-Line Tool
 ```
-cmake -E env buid/fb_test 
+cmake -E env buid/fizz-buzz_test 
 ```
 
 ## One-liner for edit-build-run cycle
 ```
-cmake --build build -- fb_app && cmake -E env build/fb_app
+cmake --build build -- fizz-buzz_app && cmake -E env build/fizz-buzz_app
 ```
 
 # Folder Structure
