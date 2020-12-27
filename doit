@@ -1,0 +1,59 @@
+#! /bin/bash
+# Helper function to JFDI (Just Do It) as a single-line command, removing all the mental burden of remembering which edit-compile-debug cycle we're currently looping in.
+
+basename=$(basename $0)
+
+function warn { echo "$@" 1>&2; }
+
+function usage { 
+    cat <<USAGE_MESSAGE 1>&2
+USAGE: $basename target actions
+    target = app|test
+    actions = config generate build run
+USAGE_MESSAGE
+}
+
+# Gather target...
+case "$1" in
+    app)  TARGET=fizz-buzz_app;  shift 1
+	  ;;
+    test) TARGET=fizz-buzz_test; shift 1
+	  ;;
+    *) warn "Error: missing target"; usage; exit 99;
+	;;
+esac
+
+
+# Gather actions...
+
+(($# > 0 )) || 
+    { warn "Error: missing action"; usage; exit 1; }
+
+typeset -i do_generate=0
+typeset -i do_build=0
+typeset -i do_run=0
+
+
+while (($# > 0))
+do
+    case "$1" in
+	config|generate) do_generate=1; shift 1;;
+	build)    do_build=1; shift 1;;
+	run)      do_run=1; shift 1;;
+	*)        warn "illegal action: $1"; usage; exit 1;;
+    esac
+done
+
+# Do the work (in the right order)...
+
+(($do_generate == 1)) &&
+    { cmake -S . -B build -G "Unix Makefiles" || exit $?; }
+
+(($do_build == 1)) &&
+    { cmake --build build -- ${TARGET} || exit $?; }
+
+(($do_run == 1)) &&
+    { cmake -E env build/${TARGET} || exit $?; }
+
+exit 0
+
