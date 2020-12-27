@@ -48,7 +48,7 @@ add_executable(
 )
 
 target_link_libraries(
-    fb_test
+    fizz-buzz_test
     ${GTEST_LIBRARIES} 
     pthread
 )
@@ -57,7 +57,7 @@ target_link_libraries(
 set(TestArgs "")
 
 gtest_add_tests(
-    fb_test
+    fizz-buzz_test
     "${TestArgs}" 
     AUTO
 )
